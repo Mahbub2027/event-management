@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -8,6 +8,8 @@ const SignUp = () => {
     const {createUser} = useContext(AuthContext);
     const [registrationError, setRegistrationError] = useState();
     const navigate = useNavigate();
+    const location = useLocation();
+
     const handleRegister= e =>{
         e.preventDefault();
 
@@ -41,7 +43,7 @@ const SignUp = () => {
                 icon: 'success',
                 confirmButtonText: 'Ok'
               })
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
 
         })
         .catch(error=>{

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from 'sweetalert2'
 
@@ -7,6 +7,7 @@ const Login = () => {
     const {loginUser, googleLogin} = useContext(AuthContext);
     const [loginPassError, setLoginPassError] = useState();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -20,7 +21,7 @@ const Login = () => {
         loginUser(email, password)
         .then(res=>{
             console.log(res.user);
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
             Swal.fire({
                 title: 'Success',
                 text: 'Login Successfull',
@@ -41,7 +42,7 @@ const Login = () => {
         googleLogin()
         .then(result=>{
             console.log(result.user)
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
             Swal.fire({
                 title: 'Success',
                 text: 'Login Successfull',

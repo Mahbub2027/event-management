@@ -43,8 +43,9 @@ const Navbar = () => {
                 {
                     user ?
                     <>
-                        <span>{user?.name}</span>
-                        <button onClick={handleLogOut} className="btn"><Link to='/login'>Logout</Link></button>
+                        <span>{user?.displayName}</span>
+                        {/* <span>{user?.photoURL}</span> */}
+                        <button onClick={handleLogOut} className="btn font-bold text-xl ml-2"><Link to='/login'>Logout</Link></button>
                     </> 
                     :
                     <button className="btn font-bold text-xl"><Link to='/login'>Login</Link></button>

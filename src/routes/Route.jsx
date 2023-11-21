@@ -6,6 +6,7 @@ import SignUp from "../auth/SignUp";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 // import ServicesDetails from "../pages/HomePage/Services/ServicesDetails";
 import ServicesCategory from "../pages/HomePage/Services/ServicesCategory";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/servicesDetails/:id',
-          element: <ServicesCategory></ServicesCategory>,
+          element: <PrivateRoute><ServicesCategory></ServicesCategory></PrivateRoute>,
           loader: ()=> fetch('event.json')
         }
       ]

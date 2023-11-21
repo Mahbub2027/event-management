@@ -4,7 +4,8 @@ import Home from "../pages/HomePage/Home/Home";
 import Login from "../auth/Login";
 import SignUp from "../auth/SignUp";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import ServicesDetails from "../pages/HomePage/Services/ServicesDetails";
+// import ServicesDetails from "../pages/HomePage/Services/ServicesDetails";
+import ServicesCategory from "../pages/HomePage/Services/ServicesCategory";
 
 
 
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/servicesDetails/:id',
-          element: <ServicesDetails></ServicesDetails>
+          element: <ServicesCategory></ServicesCategory>,
+          loader: ()=> fetch('event.json')
         }
       ]
     },

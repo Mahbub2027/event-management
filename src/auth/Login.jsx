@@ -1,10 +1,12 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const {loginUser, googleLogin} = useContext(AuthContext);
+    const [loginPassError, setLoginPassError] = useState();
+    const navigate = useNavigate();
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -18,10 +20,18 @@ const Login = () => {
         loginUser(email, password)
         .then(res=>{
             console.log(res.user);
-            alert("Login successfully.")
+            navigate('/')
+            Swal.fire({
+                title: 'Success',
+                text: 'Login Successfull',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
+            
         })
         .catch(error=>{
             console.log(error.message)
+            setLoginPassError(" *Please provide valid email & password")
         })
 
 
@@ -31,6 +41,13 @@ const Login = () => {
         googleLogin()
         .then(result=>{
             console.log(result.user)
+            navigate('/')
+            Swal.fire({
+                title: 'Success',
+                text: 'Login Successfull',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
         })
         .catch(error=>{
             console.log(error)
@@ -57,17 +74,24 @@ const Login = () => {
                             {/* <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label> */}
+                            {
+                                loginPassError && <p className="text-red-500 mt-1">{loginPassError}</p>
+                            }
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
+                            
                         </div>
                         <div className="form-control mt-6">
                             <button onClick={handleGoogleLogin} className="btn btn-primary normal-case">Login with Google</button>
+                           
                         </div>
                         <p>New here! Please <Link to='/signup' className="text-blue-500 underline font-bold">Register</Link></p>
+                       
                     </form>
+                    
                 </div>
-            </div>
+            </div> 
         </div>
     );
 };

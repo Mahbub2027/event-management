@@ -1,11 +1,13 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-
+import Swal from "sweetalert2";
 
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext);
+    const [registrationError, setRegistrationError] = useState();
+    const navigate = useNavigate();
     const handleRegister= e =>{
         e.preventDefault();
 
@@ -16,14 +18,35 @@ const SignUp = () => {
         const userRegister = {name, email, password};
         console.log(userRegister);
 
+        if(password.length < 6)
+        {
+            setRegistrationError("Password should be at least 6 characters")
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setRegistrationError('You should have at least one UPPERCASE letter')
+            return;
+        }
+        else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\|-]/.test(password)){
+            setRegistrationError('You should have at least one special caracter.')
+            return;
+        }
+
         createUser(email, password)
         .then(result=>{
-            console.log(result.user)
-            alert("Registration successfull")
+            console.log(result.user);
+            Swal.fire({
+                title: 'Success',
+                text: 'Registration Successfull',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
+            navigate('/')
 
         })
         .catch(error=>{
             console.log(error);
+            setRegistrationError(error.message)
         })
 
 
@@ -54,6 +77,9 @@ const SignUp = () => {
                             {/* <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label> */}
+                        {
+                            registrationError && <p className="text-red-500 mt-1">{registrationError}</p>
+                        }
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>

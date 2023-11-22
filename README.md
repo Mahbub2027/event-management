@@ -1,20 +1,20 @@
 # Education & Training Events Projects
 
 ## EduSpark
-### * Services: 
+* ### Services: 
 Here we provides different types of educational workshops, bootcamps etc. services. So, anyone can find this all quickly.
-### * Blog:
+* ### Blog:
 Our websites have Blog section. So, anyone can read different types of blog.
-### * Events:
+* ### Events:
 We have an event section. Here anyone can find upcoming events for workshop, conference etc.
-### * Photo gallery:
+* ### Photo gallery:
 Here visitors see our previous events photos.
-### * Authentication:
+* ### Authentication:
 To visit all the section you must register our website. 
 
 
 
-### * Click here for [livelink](https://event-management-d2e91.web.app/)
+* ### Click here for [livelink](https://event-management-d2e91.web.app/)
 
 
 <!-- This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

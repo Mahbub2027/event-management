@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/nC7XKY6/pexels-photo-840996.jpg)' }}>
+                <div className="hero-overlay bg-opacity-50"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                    <div className="text-white">
+                        <h1 className="mb-5 text-5xl font-bold">Elevate Your Skills, Ignite Your Future</h1>
+                        <p className="mb-5">Embark on a learning adventure with LearnXperience! Our education and training events are designed to inspire, educate, and propel you towards success.</p>
+                        <button className="p-3 rounded-lg text-white font-bold bg-[#FC3916]"><Link to='/login'>Get Started</Link></button>
                     </div>
                 </div>
             </div>

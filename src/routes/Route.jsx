@@ -7,6 +7,8 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 // import ServicesDetails from "../pages/HomePage/Services/ServicesDetails";
 import ServicesCategory from "../pages/HomePage/Services/ServicesCategory";
 import PrivateRoute from "./PrivateRoute";
+import Events from "../pages/Events/Events";
+import Blog from "../pages/Blog/Blog";
 
 
 
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
           path: '/servicesDetails/:id',
           element: <PrivateRoute><ServicesCategory></ServicesCategory></PrivateRoute>,
           loader: ()=> fetch('/event.json')
+        },
+        {
+          path: '/upcomingEvents',
+          element: <Events></Events>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
         }
       ]
     },

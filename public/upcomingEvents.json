@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/ctLBKdj/images-q-tbn-ANd9-Gc-RZJl8-SYk-NIDh-Cea7-Wh-VGqum-LB-76-An-R0-Af-Dyejew-FG4-Ylpb-Tue-T0z-OTJNl-P3-Ax.png",
+        "banner_img": "https://i.ibb.co/DzBFQx1/workshop-1425446-1280.jpg",
+        "name": "Workshops and Webinars",
+        "price": 49.99,
+        "short_description": "We regularly develop and offer new workshops and webinars that focus on particular departments.",
+        "eventName": "Tech Summit 2023",
+        "date": "2023-12-15",
+        "time": "09:00 AM - 06:00 PM",
+        "location": "Innovation Center, Dhaka",
+        "event_description": "Join our one-day workshop to dive into the world of web development. This hands-on session covers HTML, CSS, and JavaScript basics. No prior coding experience required...."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/vvz2yR8/images-q-tbn-ANd9-Gc-RAMg-Gtm8u-Bygon-W-V1-Vxdta-LOCh-DKOqgh-Qw-usqp-CAU.jpg",
+        "banner_img": "https://i.ibb.co/K2wpRKZ/business-3189797-1280.png",
+        "name": "Career Fair in Technology",
+        "price": 70,
+        "short_description": "Connect with top tech companies and explore career opportunities.",
+        "eventName": "Tech Careers Expo 2023",
+        "date": "2023-10-05",
+        "time": "02:00 PM - 06:00 PM",
+        "location": "Innovation Center, Dhaka",
+        "event_description": "Explore career opportunities in the technology industry. Meet representatives from leading tech companies, attend informational sessions, and submit your resume directly to employers...."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/zrm3WDN/images-q-tbn-ANd9-Gc-Sim7-P98-Wt-EZ2r1-Riybcey-K1nar-Dp-HMDbm-C3w-usqp-CAU.jpg",
+        "banner_img": "https://i.ibb.co/8xn23JH/photo-1531482615713-2afd69097998-q-80-w-1470-auto-format-fit-crop-ixlib-rb-4-0.jpg",
+        "name": "Hackathons and Coding Bootcamps",
+        "price": 129.99,
+        "short_description": "Include events focused on hands-on coding challenges and intensive programming bootcamps.",
+        "eventName": "Tech Summit 2023",
+        "date": "2023-11-15",
+        "time": "09:00 AM - 08:00 PM",
+        "location": "Innovation Center, Dhaka",
+        "event_description": "Immerse yourself in the dynamic world of technology with our Hackathons and Coding Bootcamps. These intensive programs offer hands-on experience, allowing participants to tackle real-world challenges.... "
+   }
+]

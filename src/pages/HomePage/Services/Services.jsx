@@ -14,7 +14,7 @@ const Services = () => {
     return (
         <div className="w-10/12 mx-auto my-20">
             <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 text-[#FC3916]">Educational and Training Events</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {
                 eventDetails.map(event=><ServicesDetails key={event.id} event={event}></ServicesDetails>)
             }

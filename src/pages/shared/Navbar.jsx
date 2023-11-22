@@ -16,7 +16,7 @@ const Navbar = () => {
     const navLinks = <>
     
         <li className="mr-3 font-bold"><NavLink className={({isActive, isPending})=> isPending? 'pending' : isActive? 'text-red-500 underline' : ''} to='/'>Home</NavLink></li>
-        <li className="mr-3 font-bold"><NavLink className={({isActive, isPending})=> isPending? 'pending' : isActive? 'text-red-500 underline' : ''} to='/about'>About</NavLink></li>
+        {/* <li className="mr-3 font-bold"><NavLink className={({isActive, isPending})=> isPending? 'pending' : isActive? 'text-red-500 underline' : ''} to='/about'>About</NavLink></li> */}
         {/* <li className="mr-3 font-bold"><NavLink className={({isActive, isPending})=> isPending? 'pending' : isActive? 'text-red-500 underline' : ''} to='/servicesDetails'>Services</NavLink></li> */}
         {
             user ? 

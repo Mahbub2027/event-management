@@ -80,11 +80,11 @@ const Login = () => {
                             }
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary font-bold text-white text-base">Login</button>
                             
                         </div>
                         <div className="form-control mt-6">
-                            <button onClick={handleGoogleLogin} className="btn btn-primary normal-case">Login with Google</button>
+                            <button onClick={handleGoogleLogin} className="p-2 bg-[#FC3916] rounded-lg text-white font-bold normal-case">Login with Google</button>
                            
                         </div>
                         <p>New here! Please <Link to='/signup' className="text-blue-500 underline font-bold">Register</Link></p>

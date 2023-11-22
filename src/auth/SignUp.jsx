@@ -84,7 +84,7 @@ const SignUp = () => {
                         }
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="p-3 rounded-lg font-bold text-white text-base bg-[#FC3916]">Create an account</button>
                         </div>
                         <p>Already have an account? Please <Link to='/login' className="text-blue-500 underline font-bold">Login</Link></p>
                     </form>

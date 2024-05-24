@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../shared/Footer";
 import Navbar from "../shared/Navbar";
+import { motion } from "framer-motion";
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([])
@@ -13,7 +14,10 @@ const Blog = () => {
         <div>
             <Navbar></Navbar>
             <div className="w-11/12 mx-auto my-10">
-                <div className=""><h2 className="text-3xl font-bold mb-5 text-[#FC3916]">Latest Bolg</h2></div> <hr />
+                <motion.div  initial={{x: -100, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{x: {type: "spring", stiffness: 30}, 
+                        duration: 2}}className=""><h2 className="text-4xl font-bold mb-5 text-[#FC3916]">Latest Bolg</h2></motion.div> <hr />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20">
                     {
                         blogs.map(blog => <p

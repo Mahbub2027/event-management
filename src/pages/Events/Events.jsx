@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
+import { motion } from "framer-motion";
 
 const Events = () => {
     const [upcomingEvents, setUpcomingEvents] = useState([])
@@ -13,8 +14,15 @@ const Events = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h2 className="text-3xl font-bold text-center my-10">Upcoming Events</h2>
-            <div  className=" w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <motion.h2  
+            initial={{x: 100, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{duration: 2}}
+             className="text-4xl font-bold text-center my-10 text-[#FC3916] ">Upcoming Events</motion.h2>
+            <motion.div  initial={{x: -100, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{duration: 2}} 
+                        className=" w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {
                 upcomingEvents.map(upcoming => <p
                     key={upcoming.id}>
@@ -35,7 +43,7 @@ const Events = () => {
                     </div>
                 </p>)
             }
-            </div>
+            </motion.div>
             <Footer></Footer>
         </div>
     );

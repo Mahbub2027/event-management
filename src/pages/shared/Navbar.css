@@ -1,0 +1,11 @@
+.nav-btn{
+    
+--button-primary-color: #fb3504;
+--button-primary-color-dark: #f90b23;
+--button-primary-color-light: #ffffff;
+--button-primary-color-hover: #E70D0D;
+--button-primary-color-active: #f33716;
+--button-primary-border: 8px solid transparent;
+font-size: large;
+font-weight: bold;
+}

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from 'sweetalert2'
+import { AwesomeButton } from "react-awesome-button";
 
 const Login = () => {
     const {loginUser, googleLogin} = useContext(AuthContext);
@@ -80,10 +81,11 @@ const Login = () => {
                             }
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary font-bold text-white text-base">Login</button>
+                        <AwesomeButton  type="primary">Login</AwesomeButton>
                             
                         </div>
                         <div className="form-control mt-6">
+                        {/* <AwesomeButton onClick={handleGoogleLogin} className="nav-btn"  type="primary">Login with Google</AwesomeButton> */}
                             <button onClick={handleGoogleLogin} className="p-2 bg-[#FC3916] rounded-lg text-white font-bold normal-case">Login with Google</button>
                            
                         </div>

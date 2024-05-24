@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { AwesomeButton } from "react-awesome-button";
 
 
 const SignUp = () => {
@@ -84,7 +85,8 @@ const SignUp = () => {
                         }
                         </div>
                         <div className="form-control mt-6">
-                            <button className="p-3 rounded-lg font-bold text-white text-base bg-[#FC3916]">Create an account</button>
+                        <AwesomeButton className="nav-btn"  type="primary">Create an account</AwesomeButton>
+                            {/* <button className="p-3 rounded-lg font-bold text-white text-base bg-[#FC3916]">Create an account</button> */}
                         </div>
                         <p>Already have an account? Please <Link to='/login' className="text-blue-500 underline font-bold">Login</Link></p>
                     </form>
